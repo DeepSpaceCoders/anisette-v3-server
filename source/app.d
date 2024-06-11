@@ -104,7 +104,7 @@ int main(string[] args) {
 	if (!(file.exists(coreADIPath) && file.exists(SSCPath))) {
 		auto http = HTTP();
 		log.info("Downloading libraries from Apple servers...");
-		auto apkData = get!(HTTP, ubyte)("https://apps.mzstatic.com/content/android-apple-music-apk/applemusic.apk", http);
+		auto apkData = get!(HTTP, ubyte)("https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=2087734&key=538ea26b4832de08662fae15dcc7f2169d7f0138", http);
 		log.info("Done !");
 		auto apk = new ZipArchive(apkData);
 		auto dir = apk.directory();
